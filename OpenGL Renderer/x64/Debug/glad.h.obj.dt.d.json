@@ -1,0 +1,12 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\tobyw\\documents\\git projects\\opengl renderer\\libraries\\include\\glad\\glad.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\tobyw\\documents\\git projects\\opengl renderer\\libraries\\include\\khr\\khrplatform.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

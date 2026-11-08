@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "OpenGL Renderer\\x64\\Debug\\Main.obj",
+            "outputs": [
+                "OpenGL Renderer\\x64\\Debug\\Main.cpp.obj.dt.module.json",
+                "OpenGL Renderer\\x64\\Debug\\Main.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
