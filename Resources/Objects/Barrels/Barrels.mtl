@@ -1,4 +1,4 @@
-# Blender 5.2.2 LTS MTL File: 'Barrels.obj'
+# Blender 5.2.2 LTS MTL File: 'BARRELS.obj'
 # www.blender.org
 
 newmtl Barrel_PropMaterial
@@ -9,7 +9,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd Textures/colour1.png
+map_Kd Textures/Colour1.png
+map_Ks Textures/Roughness1.png
+map_Bump -bm 1.000000 Textures/Normal1.png
 
 newmtl BottleMaterial
 Ns 194.117630
@@ -19,4 +21,6 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd Textures/colour2.png
+map_Kd Textures/Colour2.png
+map_Ks Textures/Roughness2.png
+map_Bump -bm 1.000000 Textures/Normal2.png
