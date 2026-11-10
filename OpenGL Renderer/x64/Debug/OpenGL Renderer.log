@@ -1,5 +1,5 @@
 ﻿  Main.cpp
-C:\Users\tobyw\Documents\Git Projects\OpenGL Renderer\Main.cpp(197,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tobyw\Documents\Git Projects\OpenGL Renderer\Main.cpp(222,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(init.obj)' or at 'C:\Users\tobyw\Documents\Git Projects\OpenGL Renderer\x64\Debug\glfw3.pdb'; linking object as if no debug info
 glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(window.obj)' or at 'C:\Users\tobyw\Documents\Git Projects\OpenGL Renderer\x64\Debug\glfw3.pdb'; linking object as if no debug info
 glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(input.obj)' or at 'C:\Users\tobyw\Documents\Git Projects\OpenGL Renderer\x64\Debug\glfw3.pdb'; linking object as if no debug info

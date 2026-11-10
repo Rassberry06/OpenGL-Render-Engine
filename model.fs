@@ -33,6 +33,15 @@ uniform PointLight pointLights[NR_POINT_LIGHTS];
 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir, vec3 albedo);
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir, vec3 albedo);
 
+float near = 0.1; 
+float far  = 30.0; 
+
+float LinearizeDepth(float depth) 
+{
+    float z = depth * 2.0 - 1.0; // back to NDC 
+    return (2.0 * near * far) / (far + near - z * (far - near));	
+}
+
 void main()
 {
     vec3 albedo = texture(texture_diffuse1, TexCoords).rgb;
@@ -42,7 +51,8 @@ void main()
     vec3 result = CalcDirLight(dirLight, norm, viewDir, albedo);
     for (int i = 0; i < NR_POINT_LIGHTS; i++)
         result += CalcPointLight(pointLights[i], norm, FragPos, viewDir, albedo);
-
+    
+    float depth = LinearizeDepth(gl_FragCoord.z) / far; // divide by far for demonstration
     FragColor = vec4(result, 1.0);
 }
 
@@ -51,7 +61,7 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir, vec3 albedo)
     vec3 lightDir = normalize(-light.direction);
     float diff = max(dot(normal, lightDir), 0.0);
     vec3 reflectDir = reflect(-lightDir, normal);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
+    float spec = 1 - pow(max(dot(viewDir, reflectDir), 0.0), shininess);
 
     vec3 ambient  = light.ambient * albedo;
     vec3 diffuse  = light.diffuse * diff * albedo;
