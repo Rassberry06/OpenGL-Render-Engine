@@ -168,6 +168,8 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="depth.fs" />
+    <None Include="depth.vs" />
     <None Include="lightSource.fs" />
     <None Include="lightSource.vs" />
     <None Include="model.fs" />

@@ -48,5 +48,7 @@
     <None Include="lightSource.fs" />
     <None Include="model.vs" />
     <None Include="model.fs" />
+    <None Include="depth.vs" />
+    <None Include="depth.fs" />
   </ItemGroup>
 </Project>
