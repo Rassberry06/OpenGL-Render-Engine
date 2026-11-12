@@ -50,5 +50,8 @@
     <None Include="model.fs" />
     <None Include="depth.vs" />
     <None Include="depth.fs" />
+    <None Include="depthCube.gs" />
+    <None Include="depthCube.vs" />
+    <None Include="depthCube.fs" />
   </ItemGroup>
 </Project>

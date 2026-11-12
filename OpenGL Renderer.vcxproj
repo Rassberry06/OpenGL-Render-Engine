@@ -169,7 +169,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="depth.fs" />
+    <None Include="depthCube.fs" />
+    <None Include="depthCube.gs" />
     <None Include="depth.vs" />
+    <None Include="depthCube.vs" />
     <None Include="lightSource.fs" />
     <None Include="lightSource.vs" />
     <None Include="model.fs" />
