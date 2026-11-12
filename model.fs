@@ -10,6 +10,7 @@ in VS_OUT {
 } fs_in;
 
 uniform sampler2D diffuseMap;
+uniform sampler2D specularMap;
 uniform sampler2D normalMap;
 uniform samplerCube depthCubeMap;
 
@@ -64,7 +65,7 @@ float ShadowCalculation(vec3 fragPos)
     // shadow /= (samples * samples * samples);
     float shadow = 0.0;
     float bias = 0.15;
-    int samples = 64;
+    int samples = 1;
     float viewDistance = length(viewPos - fragPos);
     float diskRadius = (1.0 + (viewDistance / far_plane)) / 25.0;
     for(int i = 0; i < samples; ++i)
@@ -88,7 +89,7 @@ void main()
     vec3 normal = texture(normalMap, fs_in.TexCoords).rgb;
     // transform normal vector to range [-1,1]
     normal = normalize(normal * 2.0 - 1.0);  // this normal is in tangent space
-    vec3 lightColor = vec3(0.3);
+    vec3 lightColor = vec3(1.0);
     // ambient
     vec3 ambient = 0.3 * lightColor;
     // diffuse
@@ -101,7 +102,8 @@ void main()
     float spec = 0.0;
     vec3 halfwayDir = normalize(lightDir + viewDir);  
     spec = pow(max(dot(normal, halfwayDir), 0.0), 64.0);
-    vec3 specular = spec * lightColor;    
+    float specStrength = texture(specularMap, fs_in.TexCoords).r;
+    vec3 specular = specStrength * spec * lightColor;
     // calculate shadow
     float shadow = shadows ? ShadowCalculation(fs_in.FragPos) : 0.0;                      
     vec3 lighting = (ambient + (1.0 - shadow) * (diffuse + specular)) * color;    
