@@ -55,4 +55,4 @@ I was running into issues with my normal map and point light shadows (which use 
 <img width="1920" height="1080" alt="Screenshot (122)" src="https://github.com/user-attachments/assets/b3162dbe-f42d-436d-9a96-194497c030c2" />
 I got this working after finding out the shadows, specular and normal map were using the wrong texture.
 
-This is the finished result with shadows and a diffuse, specular and normal map. I now want to use this to create a simple game, so I will need to implement many mroe features like skeletal animation, collisions, particles, text rendering and much more.
+This is the finished result with shadows and a diffuse, specular and normal map. I now want to use this to create a simple game, so I will need to implement many more features like skeletal animation, collisions, particles, text rendering and much more.
