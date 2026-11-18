@@ -177,6 +177,9 @@ int main()
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 	modelShader.use();
+	modelShader.setInt("diffuseMap", 0);
+	modelShader.setInt("specularMap", 1);
+	modelShader.setInt("normalMap", 2);
 	modelShader.setInt("depthCubeMap", 7);
 	modelShader.setInt("shadowMap", 8);
 	//depthQuadShader.use();

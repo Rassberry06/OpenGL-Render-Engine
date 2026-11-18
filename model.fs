@@ -64,7 +64,7 @@ float ShadowCalculation(vec3 fragPos)
     // }
     // shadow /= (samples * samples * samples);
     float shadow = 0.0;
-    float bias = 0.15;
+    float bias = 0.1;
     int samples = 1;
     float viewDistance = length(viewPos - fragPos);
     float diskRadius = (1.0 + (viewDistance / far_plane)) / 25.0;
@@ -103,10 +103,11 @@ void main()
     vec3 halfwayDir = normalize(lightDir + viewDir);  
     spec = pow(max(dot(normal, halfwayDir), 0.0), 64.0);
     float specStrength = texture(specularMap, fs_in.TexCoords).r;
-    vec3 specular = specStrength * spec * lightColor;
+    vec3 specular = specStrength * spec * lightColor * 1.5;
     // calculate shadow
     float shadow = shadows ? ShadowCalculation(fs_in.FragPos) : 0.0;                      
     vec3 lighting = (ambient + (1.0 - shadow) * (diffuse + specular)) * color;    
     
     FragColor = vec4(lighting, 1.0);
+    //FragColor = vec4(texture(normalMap, fs_in.TexCoords).rgb, 1.0);
 }
