@@ -23,35 +23,35 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="colour.vs" />
-    <Text Include="colour.fs" />
+    <Text Include="Shaders\colour.vs" />
+    <Text Include="Shaders\colour.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="shader_s.h">
+    <ClInclude Include="Classes\shader_s.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stb_image.h">
+    <ClInclude Include="Classes\stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="camera.h">
+    <ClInclude Include="Classes\camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mesh.h">
+    <ClInclude Include="Classes\mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="model.h">
+    <ClInclude Include="Classes\model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="lightSource.vs" />
-    <None Include="lightSource.fs" />
-    <None Include="model.vs" />
-    <None Include="model.fs" />
-    <None Include="depth.vs" />
-    <None Include="depth.fs" />
-    <None Include="depthCube.gs" />
-    <None Include="depthCube.vs" />
-    <None Include="depthCube.fs" />
+    <None Include="Shaders\lightSource.vs" />
+    <None Include="Shaders\lightSource.fs" />
+    <None Include="Shaders\model.vs" />
+    <None Include="Shaders\model.fs" />
+    <None Include="Shaders\depth.vs" />
+    <None Include="Shaders\depth.fs" />
+    <None Include="Shaders\depthCube.gs" />
+    <None Include="Shaders\depthCube.vs" />
+    <None Include="Shaders\depthCube.fs" />
   </ItemGroup>
 </Project>

@@ -12,10 +12,10 @@
 
 #include<cstdlib>
 
-#include "shader_s.h"
+#include "Classes/shader_s.h"
 //#include "stb_image.h"
-#include "camera.h"
-#include "model.h"
+#include "Classes/camera.h"
+#include "Classes/model.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -100,9 +100,9 @@ int main()
 	
 	//Shader depthQuadShader("colour.vs", "colour.fs");
 	//Shader depthShader("depth.vs", "depth.fs");
-	Shader depthCubeShader("depthCube.vs", "depthCube.fs", "depthCube.gs");
-	Shader lightSourceShader("lightSource.vs", "lightSource.fs");
-	Shader modelShader("model.vs", "model.fs");
+	Shader depthCubeShader("Shaders/depthCube.vs", "Shaders/depthCube.fs", "Shaders/depthCube.gs");
+	Shader lightSourceShader("Shaders/lightSource.vs", "Shaders/lightSource.fs");
+	Shader modelShader("Shaders/model.vs", "Shaders/model.fs");
 
 	// Set initial viewport size and register resize callback
 	glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);

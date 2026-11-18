@@ -157,26 +157,26 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="colour.fs" />
-    <Text Include="colour.vs" />
+    <Text Include="Shaders\colour.fs" />
+    <Text Include="Shaders\colour.vs" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="mesh.h" />
-    <ClInclude Include="model.h" />
-    <ClInclude Include="shader_s.h" />
-    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Classes\camera.h" />
+    <ClInclude Include="Classes\mesh.h" />
+    <ClInclude Include="Classes\model.h" />
+    <ClInclude Include="Classes\shader_s.h" />
+    <ClInclude Include="Classes\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="depth.fs" />
-    <None Include="depthCube.fs" />
-    <None Include="depthCube.gs" />
-    <None Include="depth.vs" />
-    <None Include="depthCube.vs" />
-    <None Include="lightSource.fs" />
-    <None Include="lightSource.vs" />
-    <None Include="model.fs" />
-    <None Include="model.vs" />
+    <None Include="Shaders\depth.fs" />
+    <None Include="Shaders\depthCube.fs" />
+    <None Include="Shaders\depthCube.gs" />
+    <None Include="Shaders\depth.vs" />
+    <None Include="Shaders\depthCube.vs" />
+    <None Include="Shaders\lightSource.fs" />
+    <None Include="Shaders\lightSource.vs" />
+    <None Include="Shaders\model.fs" />
+    <None Include="Shaders\model.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
